@@ -12,57 +12,87 @@ struct ContentView: View {
     @State private var isShareSheetShowing = false
     
     var body: some View {
-        VStack{
-            HStack(alignment: .top, spacing: 5){
-                Button(action: {self.shareButton()}
-                ){
-                    Image(systemName: "square.and.arrow.up")
-                        
-                        .resizable()
-                        .frame(width: 28, height: 35)
-                        .aspectRatio(contentMode: .fit)
-                        .offset(y: 15)
-                        .padding(.horizontal, 15)
+        GeometryReader{ (proxy : GeometryProxy) in
+            // VStack that occupies the whole screen exluding the safe space
+            VStack{
+                // HStack for the top where the share button and Settings button lives
+                HStack(alignment: .top){
+                    // Share button
+                    Button(action: {self.shareButton()}
+                    ){
+                        // Apply iOS stock share image
+                        Image(systemName: "square.and.arrow.up")
+                            
+                            // resize image to fit and offset it a little bit so it's not touching the literal edge
+                            .resizable()
+                            .frame(width: 28, height: 35)
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x: 10, y: 8)
+                    }
                     
+                    // This gives us our end to end look
+                    Spacer()
+                    
+                    // Settings button
+                    Button(action: {}){
+                        // Apply iOS stock settings image
+                        Image(systemName: "gear")
+                            
+                            // resize image to fit and offset it a bit so it's not touching the edge
+                            .resizable()
+                            .frame(width: 33, height: 35)
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x: -8, y: 8)
+                            
+                    }
                 }
+                    // set the width of our HStack to the width of the device
+                    .frame(width: proxy.size.width)
+                    .padding()
+                
                 
                 Spacer()
                 
-                Button(action: {}){
-                    Image(systemName: "gear")
-                        .resizable()
-                        .frame(width: 33, height: 35)
-                        .aspectRatio(contentMode: .fit)
-                        .offset(y: 15)
-                        .padding(.horizontal, 15)
+                // VStack for our gif
+                VStack(alignment: .center){
+                    GIFView(gifName: "keyboard-demo")
                 }
-            }
-            Spacer()
-            
-//            HStack(alignment: .center){
-//                GIFView(gifName: "keyboard-demo")
-//            }
-            
-            HStack(alignment: .bottom){
-                Button(action: {UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!)}) {
-                    Image(systemName: "keyboard")
-                    Text("Add Keyboard")                  .background(Color.blue)
-                        .foregroundColor(Color .white)
-                        .font(.system(size: 18))
+                    // set the width to equal to the device's width
+                    .frame(width: proxy.size.width)
+                
+                Spacer()
+                
+                // HStack for our button to add the keyboard
+                HStack(alignment: .bottom){
+                    // Add keyboard button
+                    Button(action: {UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!)}) {
+                        // add a little stock keyboard image
+                        Image(systemName: "keyboard")
+                            .foregroundColor(Color .white)
+                        Text("Add Keyboard")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color .white)
+                            .font(.largeTitle)
+                    }
                         
                 }
+                    // Set the min and max width for our button (fine on iPhone 6 and up)
+                    .frame(minWidth: 100, maxWidth: 300, minHeight: 50, maxHeight: 60)
                     .background(Color .blue)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 25)
                     .stroke(Color.white, lineWidth: 29))
+                    
+                    // Only support portrait...no reason to rotate
+                    .supportedOrientations(.portrait)
+                
             }
-            
-            Spacer()
-                .supportedOrientations(.portrait)
-            
+            // Make our VStack that occupies the whole screen equal to the dimension of the specific device. Excluding the safe space.
+            .frame(width: proxy.size.width, height:proxy.size.height , alignment: .center)
         }
     }
     
+    // Function to bring up the share sheet
     func shareButton(){
         isShareSheetShowing.toggle()
         let url = URL(string: "https://google.com")
