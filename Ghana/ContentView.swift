@@ -61,27 +61,35 @@ struct ContentView: View {
                     .frame(width: proxy.size.width)
                 
                 Spacer()
+                Spacer()
+                Spacer()
                 
                 // HStack for our button to add the keyboard
-                HStack(alignment: .bottom){
-                    // Add keyboard button
-                    Button(action: {UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!)}) {
-                        // add a little stock keyboard image
-                        Image(systemName: "keyboard")
-                            .foregroundColor(Color .white)
-                        Text("Add Keyboard")
-                            .fontWeight(.bold)
-                            .foregroundColor(Color .white)
-                            .font(.largeTitle)
+                    HStack(alignment: .bottom){
+                        // Add keyboard button
+                        Button(action: {UIApplication.shared.open(URL.init(string: "App-prefs:General&path=Keyboard")!)}) {
+                            // add a little stock keyboard image and make it white
+                            Image(systemName: "keyboard")
+                                .resizable()
+                                .frame(width: 53, height: 30)
+                                
+                                .foregroundColor(Color.white)
+                            Text("Add Keyboard")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                                .font(.largeTitle)
+                        }
+                            
                     }
+                        // Set the min and max width for our button (fine on iPhone 6 and up)
+                        .frame(minWidth: 85, maxWidth: 325, minHeight: 35, maxHeight: 42)
+                        .padding()
+                    .cornerRadius(40)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         
-                }
-                    // Set the min and max width for our button (fine on iPhone 6 and up)
-                    .frame(minWidth: 100, maxWidth: 300, minHeight: 50, maxHeight: 60)
-                    .background(Color .blue)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.white, lineWidth: 29))
+                    .cornerRadius(28)
+               
+                    
                     
                     // Only support portrait...no reason to rotate
                     .supportedOrientations(.portrait)
