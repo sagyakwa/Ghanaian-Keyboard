@@ -2,8 +2,8 @@
 //  ContentView.swift
 //  Ghana
 //
-//  Created by Samuel Agyakwa on 5/15/20.
-//  Copyright © 2020 Samuel Agyakwa. All rights reserved.
+//  Created by Tetra Apps on 5/15/20.
+//  Copyright © 2020 Tetra Apps. All rights reserved.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     // For toggling settings sheet view
     @State private var isShareSheetShowing = false
+    @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
         GeometryReader{ (proxy : GeometryProxy) in
@@ -60,18 +61,17 @@ struct ContentView: View {
                 Spacer()
                 
                 // VStack for our gif
-                VStack(alignment: .center){
+                
+                VStack{
                     GIFView(gifName: "keyboard-demo")
                 }
-                    // set the width to equal to the device's width
-                    .frame(width: proxy.size.width)
-                
-                Spacer()
-                Spacer()
-                Spacer()
+                    // Make VStack have rounded edges like iPhone X and up
+                    .padding(.all, -1.0)
+                    .frame(width: proxy.size.width - 125.0)
+                    .cornerRadius(50)
                 
                 // HStack for our button to add the keyboard
-                    HStack(alignment: .bottom){
+                HStack(alignment: .center){
                         // Add keyboard button
                         Button(action: {UIApplication.shared.open(URL.init(string: "App-prefs:General&path=Keyboard")!)}) {
                             // add a little stock keyboard image and make it white
@@ -85,15 +85,20 @@ struct ContentView: View {
                                 .foregroundColor(Color.white)
                                 .font(.largeTitle)
                         }
+                            // Set the min and max width for our button (fine on iPhone 6 and up)
+                                     .frame(minWidth: 85, maxWidth: 325, minHeight: 35, maxHeight: 42)
+                                     .padding()
+                                     .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                                     
+                                     .cornerRadius(28)
                             
                     }
-                        // Set the min and max width for our button (fine on iPhone 6 and up)
-                        .frame(minWidth: 85, maxWidth: 325, minHeight: 35, maxHeight: 42)
-                        .padding()
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                    .padding(.bottom, proxy.safeAreaInsets.top)
+                .padding(.top, 43.0)
+                .frame(width: proxy.size.width)
+                    .edgesIgnoringSafeArea(.all)
+                .background(self.colorScheme == .dark ? Color(red: 42/255, green: 44/255, blue: 44/255) : Color(red: 230/255, green: 230/255, blue: 230/255))
                         
-                        .cornerRadius(28)
-               
                     
                     
                     // Only support portrait...no reason to rotate
@@ -101,6 +106,7 @@ struct ContentView: View {
                 
             }
             // Make our VStack that occupies the whole screen equal to the dimension of the specific device. Excluding the safe space.
+                .edgesIgnoringSafeArea(.bottom)
             .frame(width: proxy.size.width, height:proxy.size.height , alignment: .center)
         }
     }
