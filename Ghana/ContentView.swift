@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    // For toggling settings sheet view
     @State private var isShareSheetShowing = false
     
     var body: some View {
@@ -33,8 +34,9 @@ struct ContentView: View {
                     // This gives us our end to end look
                     Spacer()
                     
+                    
                     // Settings button
-                    Button(action: {}){
+                    Button(action: {self.isShareSheetShowing.toggle()}){
                         // Apply iOS stock settings image
                         Image(systemName: "gear")
                             
@@ -44,6 +46,10 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .offset(x: -8, y: 8)
                             
+                    }
+                        // toggle sheet view
+                    .sheet(isPresented: self.$isShareSheetShowing) {
+                        SettingsView()
                     }
                 }
                     // set the width of our HStack to the width of the device
@@ -84,10 +90,9 @@ struct ContentView: View {
                         // Set the min and max width for our button (fine on iPhone 6 and up)
                         .frame(minWidth: 85, maxWidth: 325, minHeight: 35, maxHeight: 42)
                         .padding()
-                    .cornerRadius(40)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         
-                    .cornerRadius(28)
+                        .cornerRadius(28)
                
                     
                     
@@ -109,6 +114,8 @@ struct ContentView: View {
         
         UIApplication.shared.windows.first?.rootViewController?.present(activityView, animated: true, completion: nil)
     }
+    
+    
 }
 
 
