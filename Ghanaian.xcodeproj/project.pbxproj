@@ -18,6 +18,7 @@
 		750A3646246F39D400793B20 /* Custom.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 750A363F246F39D400793B20 /* Custom.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		75316E54246F83FA0037D99E /* GifViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E53246F83FA0037D99E /* GifViewer.swift */; };
 		75316E56246F84DE0037D99E /* OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E55246F84DE0037D99E /* OrientationSupport.swift */; };
+		75C37D332471FE7C00AA2AEB /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D322471FE7C00AA2AEB /* testView.swift */; };
 		75C44D872470EF2C00F00437 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C44D862470EF2C00F00437 /* SettingsSheet.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		750A3643246F39D400793B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75316E53246F83FA0037D99E /* GifViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewer.swift; sourceTree = "<group>"; };
 		75316E55246F84DE0037D99E /* OrientationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSupport.swift; sourceTree = "<group>"; };
+		75C37D322471FE7C00AA2AEB /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		75C44D862470EF2C00F00437 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				75316E53246F83FA0037D99E /* GifViewer.swift */,
 				75316E55246F84DE0037D99E /* OrientationSupport.swift */,
 				75C44D862470EF2C00F00437 /* SettingsSheet.swift */,
+				75C37D322471FE7C00AA2AEB /* testView.swift */,
 			);
 			path = Ghana;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				75316E54246F83FA0037D99E /* GifViewer.swift in Sources */,
 				750A3625246F39B700793B20 /* AppDelegate.swift in Sources */,
 				750A362A246F39B800793B20 /* Ghana.xcdatamodeld in Sources */,
+				75C37D332471FE7C00AA2AEB /* testView.swift in Sources */,
 				75C44D872470EF2C00F00437 /* SettingsSheet.swift in Sources */,
 				750A362C246F39B800793B20 /* ContentView.swift in Sources */,
 				750A3627246F39B700793B20 /* SceneDelegate.swift in Sources */,
