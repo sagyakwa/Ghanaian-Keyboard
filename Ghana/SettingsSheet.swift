@@ -80,56 +80,26 @@ struct SettingsView: View {
                 }
                 
              
-            } // end VStack
+            } // end VStack occupying whole view
         } // end GeometryReader
         
-    }
+    } // body View
     
-}
+} //end SetingsView struct
 
-//struct displaySettingsList: View{
-//    let aboutSetting = SettingsList(settingName: "About This App", imageName: "exclamationmark.bubble")
-//    let characterSetting = SettingsList(settingName: "Character Settings", imageName: "pencil.circle.fill")
-//    let rateUsSetting = SettingsList(settingName: "Rate Us!", imageName: "textbox")
-//    let sendUsAMessage = SettingsList(settingName: "Send A Message", imageName: "envelope.fill")
-//    let shareApp = SettingsList(settingName: "Share App", imageName: "square.and.up.arrow.fill")
-//    let termsAndPrivacy = SettingsList(settingName: "Terms & Privacy", imageName: "doc.circle.fill")
-//
-//    var body: some View {
-//        VStack{
-//            let firstList = [aboutSetting, characterSetting, rateUsSetting]
-//            let secondList = [sendUsAMessage, shareApp, termsAndPrivacy]
-//
-//
-//            let topList = List(firstList) { listItem in
-//                Image(listItem.imageName)
-//                VStack(alignment: .leading) {
-//                    Text(listItem.settingName)
-//
-//                }
-//            }
-//
-//            let bottomList = List(secondList) { listItem in
-//                Image(listItem.imageName)
-//                VStack(alignment: .leading) {
-//                    Text(listItem.settingName)
-//
-//                }
-//            }
-//        }
-//
-//
-//    }
-//}
 
+// Settings Row view where each settingsList item is passed into here and displayed
 struct SettingsRow: View{
     var settingsRow: SettingsList
     
     var body: some View {
+        // Make HStack for one row
         HStack {
+            // Set the image specified and format nicely
             Image(systemName: settingsRow.imageName)
                 .resizable()
                 .frame(width: 20, height: 20)
+            // Set text (change font later maybe)
             Text(settingsRow.settingName)
             Spacer()
         }
@@ -137,6 +107,7 @@ struct SettingsRow: View{
 }
 
 
+// Settings list to set properties of our settingRow
 struct SettingsList: Hashable, Identifiable {
     let id = UUID()
     

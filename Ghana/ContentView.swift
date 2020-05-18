@@ -94,10 +94,10 @@ struct ContentView: View {
                             
                     }
                     .padding(.bottom, proxy.safeAreaInsets.top)
-                .padding(.top, 43.0)
-                .frame(width: proxy.size.width)
+                    .padding(.top, 43.0)
+                    .frame(width: proxy.size.width)
                     .edgesIgnoringSafeArea(.all)
-                .background(self.colorScheme == .dark ? Color(red: 42/255, green: 44/255, blue: 44/255) : Color(red: 230/255, green: 230/255, blue: 230/255))
+                    .background(self.colorScheme == .dark ? Color(red: 42/255, green: 44/255, blue: 44/255) : Color(red: 230/255, green: 230/255, blue: 230/255))
                         
                     
                     
@@ -106,7 +106,7 @@ struct ContentView: View {
                 
             }
             // Make our VStack that occupies the whole screen equal to the dimension of the specific device. Excluding the safe space.
-                .edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.bottom)
             .frame(width: proxy.size.width, height:proxy.size.height , alignment: .center)
         }
     }
