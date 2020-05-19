@@ -2,7 +2,7 @@
 //  GifViewer.swift
 //  Ghanaian
 //
-//  Created by Tetra Apps on 5/15/20.
+//  Created by Samuel Agyakwa on 5/15/20.
 //  Copyright © 2020 Tetra Apps. All rights reserved.
 //
 

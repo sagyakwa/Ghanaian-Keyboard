@@ -66,6 +66,8 @@ struct SettingsView : View {
             
             
         }
+        // Only support portrait...no reason to rotate
+        .supportedOrientations(.portrait)
     }
 }
 
