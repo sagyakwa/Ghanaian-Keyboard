@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Ghana
 //
-//  Created by Tetra Apps on 5/15/20.
+//  Created by Samuel on 5/15/20.
 //  Copyright © 2020 Tetra Apps. All rights reserved.
 //
 
@@ -68,14 +68,25 @@ struct ContentView: View {
                 
                 // VStack for our gif
                 
-                VStack{
-                    GIFView(gifName: "keyboard-demo")
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack(spacing: 20){
+                        GIFView(gifName: "keyboard-demo")
+                        .padding(.all, -2.0)
+                        .padding(.bottom, -4.0)
+                        .frame(width: proxy.size.width)
+                        .cornerRadius(50)
+                        
+                        GIFView(gifName: "allow-access")
+                        .padding(.all, -2.0)
+                        .padding(.bottom, -4.0)
+                        .frame(width: proxy.size.width)
+                        .cornerRadius(50)
+                    }
+                        
                 }
-                    // Make VStack have rounded edges like iPhone X and up
-                    .padding(.all, -2.0)
-                    .padding(.bottom, -4.0)
-                    .frame(width: proxy.size.width - 125.0)
-                    .cornerRadius(50)
+                    
+                .background(Color.black)
+                .frame(width: proxy.size.width)
                 
                 // HStack for our button to add the keyboard
                 HStack(alignment: .center){
@@ -112,6 +123,7 @@ struct ContentView: View {
                     .supportedOrientations(.portrait)
                 
             }
+            .animation(.easeInOut(duration: 1.0))
             // Make our VStack that occupies the whole screen equal to the dimension of the specific device. Excluding the safe space.
             .edgesIgnoringSafeArea(.bottom)
             .frame(width: proxy.size.width, height:proxy.size.height , alignment: .center)
