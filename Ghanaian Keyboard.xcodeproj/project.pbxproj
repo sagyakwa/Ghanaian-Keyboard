@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,10 +16,19 @@
 		750A3634246F39B800793B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A3632246F39B800793B20 /* LaunchScreen.storyboard */; };
 		750A3642246F39D400793B20 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A3641246F39D400793B20 /* KeyboardViewController.swift */; };
 		750A3646246F39D400793B20 /* Custom.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 750A363F246F39D400793B20 /* Custom.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520B41D2473151F000980D3 /* KeyboardSettings.swift */; };
+		7520B42124732924000980D3 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 7520B42024732924000980D3 /* PartialSheet */; };
+		7520B42524733841000980D3 /* PushNavigationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520B42424733841000980D3 /* PushNavigationExample.swift */; };
+		7520B42724733CCC000980D3 /* NormalExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520B42624733CCC000980D3 /* NormalExample.swift */; };
 		75316E54246F83FA0037D99E /* GifViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E53246F83FA0037D99E /* GifViewer.swift */; };
 		75316E56246F84DE0037D99E /* OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E55246F84DE0037D99E /* OrientationSupport.swift */; };
-		75C37D332471FE7C00AA2AEB /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D322471FE7C00AA2AEB /* testView.swift */; };
-		75C44D872470EF2C00F00437 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C44D862470EF2C00F00437 /* SettingsSheet.swift */; };
+		75C37D352472274B00AA2AEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C37D342472274B00AA2AEB /* Default-568h@2x.png */; };
+		75C37D372472665900AA2AEB /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D362472665900AA2AEB /* About.swift */; };
+		75C37D392472DB2900AA2AEB /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D382472DB2900AA2AEB /* Options.swift */; };
+		75C37D3B2472DDA500AA2AEB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D3A2472DDA500AA2AEB /* Settings.swift */; };
+		75C37D3D2472DEE100AA2AEB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D3C2472DEE100AA2AEB /* SettingsView.swift */; };
+		75C37D3F2472F0FC00AA2AEB /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D3E2472F0FC00AA2AEB /* ShareSheet.swift */; };
+		75C37D432472F61C00AA2AEB /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D422472F61C00AA2AEB /* testView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		750A3621246F39B700793B20 /* Ghanaian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghanaian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		750A3621246F39B700793B20 /* Ghanaian Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghanaian Keyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A3624246F39B700793B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750A3626246F39B700793B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		750A3629246F39B800793B20 /* Ghana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ghana.xcdatamodel; sourceTree = "<group>"; };
@@ -59,10 +68,18 @@
 		750A363F246F39D400793B20 /* Custom.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Custom.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A3641246F39D400793B20 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		750A3643246F39D400793B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7520B41D2473151F000980D3 /* KeyboardSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettings.swift; sourceTree = "<group>"; };
+		7520B42424733841000980D3 /* PushNavigationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNavigationExample.swift; sourceTree = "<group>"; };
+		7520B42624733CCC000980D3 /* NormalExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalExample.swift; sourceTree = "<group>"; };
 		75316E53246F83FA0037D99E /* GifViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewer.swift; sourceTree = "<group>"; };
 		75316E55246F84DE0037D99E /* OrientationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSupport.swift; sourceTree = "<group>"; };
-		75C37D322471FE7C00AA2AEB /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
-		75C44D862470EF2C00F00437 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
+		75C37D342472274B00AA2AEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		75C37D362472665900AA2AEB /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		75C37D382472DB2900AA2AEB /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		75C37D3A2472DDA500AA2AEB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		75C37D3C2472DEE100AA2AEB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		75C37D3E2472F0FC00AA2AEB /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		75C37D422472F61C00AA2AEB /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7520B42124732924000980D3 /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +104,7 @@
 		750A3618246F39B700793B20 = {
 			isa = PBXGroup;
 			children = (
+				75C37D342472274B00AA2AEB /* Default-568h@2x.png */,
 				750A3623246F39B700793B20 /* Ghana */,
 				750A3640246F39D400793B20 /* Custom */,
 				750A3622246F39B700793B20 /* Products */,
@@ -95,7 +114,7 @@
 		750A3622246F39B700793B20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				750A3621246F39B700793B20 /* Ghanaian.app */,
+				750A3621246F39B700793B20 /* Ghanaian Keyboard.app */,
 				750A363F246F39D400793B20 /* Custom.appex */,
 			);
 			name = Products;
@@ -104,6 +123,7 @@
 		750A3623246F39B700793B20 /* Ghana */ = {
 			isa = PBXGroup;
 			children = (
+				7520B42424733841000980D3 /* PushNavigationExample.swift */,
 				750A3624246F39B700793B20 /* AppDelegate.swift */,
 				750A3626246F39B700793B20 /* SceneDelegate.swift */,
 				750A362B246F39B800793B20 /* ContentView.swift */,
@@ -114,8 +134,14 @@
 				750A362F246F39B800793B20 /* Preview Content */,
 				75316E53246F83FA0037D99E /* GifViewer.swift */,
 				75316E55246F84DE0037D99E /* OrientationSupport.swift */,
-				75C44D862470EF2C00F00437 /* SettingsSheet.swift */,
-				75C37D322471FE7C00AA2AEB /* testView.swift */,
+				75C37D362472665900AA2AEB /* About.swift */,
+				75C37D382472DB2900AA2AEB /* Options.swift */,
+				75C37D3A2472DDA500AA2AEB /* Settings.swift */,
+				75C37D3C2472DEE100AA2AEB /* SettingsView.swift */,
+				75C37D3E2472F0FC00AA2AEB /* ShareSheet.swift */,
+				75C37D422472F61C00AA2AEB /* testView.swift */,
+				7520B41D2473151F000980D3 /* KeyboardSettings.swift */,
+				7520B42624733CCC000980D3 /* NormalExample.swift */,
 			);
 			path = Ghana;
 			sourceTree = "<group>";
@@ -140,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		750A3620246F39B700793B20 /* Ghanaian */ = {
+		750A3620246F39B700793B20 /* Ghanaian Keyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 750A3638246F39B800793B20 /* Build configuration list for PBXNativeTarget "Ghanaian" */;
+			buildConfigurationList = 750A3638246F39B800793B20 /* Build configuration list for PBXNativeTarget "Ghanaian Keyboard" */;
 			buildPhases = (
 				750A361D246F39B700793B20 /* Sources */,
 				750A361E246F39B700793B20 /* Frameworks */,
@@ -154,9 +180,12 @@
 			dependencies = (
 				750A3645246F39D400793B20 /* PBXTargetDependency */,
 			);
-			name = Ghanaian;
+			name = "Ghanaian Keyboard";
+			packageProductDependencies = (
+				7520B42024732924000980D3 /* PartialSheet */,
+			);
 			productName = Ghana;
-			productReference = 750A3621246F39B700793B20 /* Ghanaian.app */;
+			productReference = 750A3621246F39B700793B20 /* Ghanaian Keyboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		750A363E246F39D400793B20 /* Custom */ = {
@@ -194,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 750A361C246F39B700793B20 /* Build configuration list for PBXProject "Ghanaian" */;
+			buildConfigurationList = 750A361C246F39B700793B20 /* Build configuration list for PBXProject "Ghanaian Keyboard" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,11 +232,14 @@
 				Base,
 			);
 			mainGroup = 750A3618246F39B700793B20;
+			packageReferences = (
+				7520B41F24732924000980D3 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 750A3622246F39B700793B20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				750A3620246F39B700793B20 /* Ghanaian */,
+				750A3620246F39B700793B20 /* Ghanaian Keyboard */,
 				750A363E246F39D400793B20 /* Custom */,
 			);
 		};
@@ -219,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750A3634246F39B800793B20 /* LaunchScreen.storyboard in Resources */,
+				75C37D352472274B00AA2AEB /* Default-568h@2x.png in Resources */,
 				750A3631246F39B800793B20 /* Preview Assets.xcassets in Resources */,
 				750A362E246F39B800793B20 /* Assets.xcassets in Resources */,
 			);
@@ -242,10 +275,17 @@
 				75316E54246F83FA0037D99E /* GifViewer.swift in Sources */,
 				750A3625246F39B700793B20 /* AppDelegate.swift in Sources */,
 				750A362A246F39B800793B20 /* Ghana.xcdatamodeld in Sources */,
-				75C37D332471FE7C00AA2AEB /* testView.swift in Sources */,
-				75C44D872470EF2C00F00437 /* SettingsSheet.swift in Sources */,
 				750A362C246F39B800793B20 /* ContentView.swift in Sources */,
+				7520B42724733CCC000980D3 /* NormalExample.swift in Sources */,
+				75C37D372472665900AA2AEB /* About.swift in Sources */,
+				75C37D392472DB2900AA2AEB /* Options.swift in Sources */,
+				75C37D3D2472DEE100AA2AEB /* SettingsView.swift in Sources */,
+				75C37D432472F61C00AA2AEB /* testView.swift in Sources */,
+				75C37D3B2472DDA500AA2AEB /* Settings.swift in Sources */,
+				7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */,
 				750A3627246F39B700793B20 /* SceneDelegate.swift in Sources */,
+				7520B42524733841000980D3 /* PushNavigationExample.swift in Sources */,
+				75C37D3F2472F0FC00AA2AEB /* ShareSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.Ghana;
-				PRODUCT_NAME = Ghanaian;
+				PRODUCT_NAME = "Ghanaian Keyboard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.Ghana;
-				PRODUCT_NAME = Ghanaian;
+				PRODUCT_NAME = "Ghanaian Keyboard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,7 +516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		750A361C246F39B700793B20 /* Build configuration list for PBXProject "Ghanaian" */ = {
+		750A361C246F39B700793B20 /* Build configuration list for PBXProject "Ghanaian Keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				750A3636246F39B800793B20 /* Debug */,
@@ -485,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		750A3638246F39B800793B20 /* Build configuration list for PBXNativeTarget "Ghanaian" */ = {
+		750A3638246F39B800793B20 /* Build configuration list for PBXNativeTarget "Ghanaian Keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				750A3639246F39B800793B20 /* Debug */,
@@ -504,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7520B41F24732924000980D3 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7520B42024732924000980D3 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7520B41F24732924000980D3 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		750A3628246F39B800793B20 /* Ghana.xcdatamodeld */ = {
