@@ -52,6 +52,7 @@ struct SettingsView : View {
                     .padding(.leading, 85)
                     
                 }
+                .animation(.easeIn(duration: 0.5))
                 .padding()
                 .navigationBarTitle(Text("Settings")).font(.largeTitle)
                 .navigationBarItems(trailing:

@@ -18,7 +18,7 @@ struct About: View {
                 .font(.custom("copperplate", size: 28))
             }
             
-            HStack(spacing: 10){
+            HStack(spacing: 15){
                 Text("This keyboard is intended to make the lives of many people, especially Ghanaians easier. We rarely see things made for, or tailored to us in the Western world. Without further adieu, I present to you a keyboard containg characters from Akan, Ewe, Ga, and Dagbani. Many more dialects and languages unknown to the world will come soon. Our African languages not only allow us to connect with one another, but it allows us to appreciate the sweat and history of our ancestors. It cultivates an appreciation and understanding that is beyond beneficial for us. Enjoy the experience!")
                     .font(.headline)
                     .fontWeight(.medium)

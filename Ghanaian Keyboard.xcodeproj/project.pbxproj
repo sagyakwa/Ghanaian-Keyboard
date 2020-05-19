@@ -19,6 +19,7 @@
 		7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520B41D2473151F000980D3 /* KeyboardSettings.swift */; };
 		75316E54246F83FA0037D99E /* GifViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E53246F83FA0037D99E /* GifViewer.swift */; };
 		75316E56246F84DE0037D99E /* OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E55246F84DE0037D99E /* OrientationSupport.swift */; };
+		75C272B62473974900EE33D8 /* SwiftUIPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C272B52473974900EE33D8 /* SwiftUIPagerView.swift */; };
 		75C37D352472274B00AA2AEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C37D342472274B00AA2AEB /* Default-568h@2x.png */; };
 		75C37D372472665900AA2AEB /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D362472665900AA2AEB /* About.swift */; };
 		75C37D392472DB2900AA2AEB /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C37D382472DB2900AA2AEB /* Options.swift */; };
@@ -67,6 +68,7 @@
 		7520B41D2473151F000980D3 /* KeyboardSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettings.swift; sourceTree = "<group>"; };
 		75316E53246F83FA0037D99E /* GifViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewer.swift; sourceTree = "<group>"; };
 		75316E55246F84DE0037D99E /* OrientationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSupport.swift; sourceTree = "<group>"; };
+		75C272B52473974900EE33D8 /* SwiftUIPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPagerView.swift; sourceTree = "<group>"; };
 		75C37D342472274B00AA2AEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		75C37D362472665900AA2AEB /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		75C37D382472DB2900AA2AEB /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				75C37D3C2472DEE100AA2AEB /* SettingsView.swift */,
 				75C37D3E2472F0FC00AA2AEB /* ShareSheet.swift */,
 				7520B41D2473151F000980D3 /* KeyboardSettings.swift */,
+				75C272B52473974900EE33D8 /* SwiftUIPagerView.swift */,
 			);
 			path = Ghana;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				75C37D372472665900AA2AEB /* About.swift in Sources */,
 				75C37D392472DB2900AA2AEB /* Options.swift in Sources */,
 				75C37D3D2472DEE100AA2AEB /* SettingsView.swift in Sources */,
+				75C272B62473974900EE33D8 /* SwiftUIPagerView.swift in Sources */,
 				75C37D3B2472DDA500AA2AEB /* Settings.swift in Sources */,
 				7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */,
 				750A3627246F39B700793B20 /* SceneDelegate.swift in Sources */,
