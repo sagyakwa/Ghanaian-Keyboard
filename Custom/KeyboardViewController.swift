@@ -3,7 +3,7 @@
 //  Custom
 //
 //  Created by Samuel Agyakwa on 5/15/20.
-//  Copyright © 2020 Samuel Agyakwa. All rights reserved.
+//  Copyright © 2020 Tetra Apps. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +11,9 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
+    @IBOutlet var capButton: UIButton!
+    @IBOutlet var numericButton: UIButton!
+    @IBOutlet var deleteButton: UIButton!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
