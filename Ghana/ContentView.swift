@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     // For toggling settings sheet view
     @State private var isShareSheetShowing = false
+    @State private var isSettingsShowing = false
     @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
@@ -18,45 +19,50 @@ struct ContentView: View {
             // VStack that occupies the whole screen exluding the safe space
             VStack{
                 // HStack for the top where the share button and Settings button lives
-                HStack(alignment: .top){
-                    // Share button
-                    Button(action: {self.shareButton()}
-                    ){
-                        // Apply iOS stock share image
-                        Image(systemName: "square.and.arrow.up")
-                            
-                            // resize image to fit and offset it a little bit so it's not touching the literal edge
-                            .resizable()
-                            .frame(width: 28, height: 35)
-                            .aspectRatio(contentMode: .fit)
-                            .offset(x: 10, y: 8)
+                HStack{
+                    // HStack for Share Button
+                    HStack(alignment: .top){
+                        // Share button
+                        Button(action: self.shareButton
+                        ){
+                            // Apply iOS stock share image
+                            Image(systemName: "square.and.arrow.up")
+                                
+                                // resize image to fit and offset it a little bit so it's not touching the literal edge
+                                .resizable()
+                                .frame(width: 28, height: 35)
+                                .aspectRatio(contentMode: .fit)
+                                .offset(x: 10, y: 8)
+                        }
+                        
                     }
-                    
-                    // This gives us our end to end look
-                    Spacer()
-                    
-                    
-                    // Settings button
-                    Button(action: {self.isShareSheetShowing.toggle()}){
-                        // Apply iOS stock settings image
-                        Image(systemName: "gear")
-                            
-                            // resize image to fit and offset it a bit so it's not touching the edge
-                            .resizable()
-                            .frame(width: 33, height: 35)
-                            .aspectRatio(contentMode: .fit)
-                            .offset(x: -8, y: 8)
-                            
+                        
+                        // This gives us our end to end look
+                        Spacer()
+                       
+                    // HStack for settings button
+                    HStack{
+                        // Settings button
+                        Button(action: {self.isSettingsShowing.toggle()}){
+                            // Apply iOS stock settings image
+                            Image(systemName: "gear")
+                                
+                                // resize image to fit and offset it a bit so it's not touching the edge
+                                .resizable()
+                                .frame(width: 33, height: 35)
+                                .aspectRatio(contentMode: .fit)
+                                .offset(x: -8.0, y: 8.0)
+                                
+                        } .sheet(isPresented: self.$isSettingsShowing, content: {
+                            SettingsView()
+                        })
+                           
                     }
-                        // toggle sheet view
-                    .sheet(isPresented: self.$isShareSheetShowing) {
-                        SettingsView()
-                    }
+                //put hstack curly here
                 }
-                    // set the width of our HStack to the width of the device
-                    .frame(width: proxy.size.width)
-                    .padding()
-                
+                // set the width of our HStack to the width of the device
+                .frame(width: proxy.size.width)
+                .padding()
                 
                 Spacer()
                 
@@ -66,7 +72,8 @@ struct ContentView: View {
                     GIFView(gifName: "keyboard-demo")
                 }
                     // Make VStack have rounded edges like iPhone X and up
-                    .padding(.all, -1.0)
+                    .padding(.all, -2.0)
+                    .padding(.bottom, -4.0)
                     .frame(width: proxy.size.width - 125.0)
                     .cornerRadius(50)
                 
