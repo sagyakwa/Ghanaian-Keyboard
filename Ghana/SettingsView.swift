@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import PartialSheet
 
 struct SettingsView : View {
     @ObservedObject var setting = Settings()
@@ -93,12 +92,12 @@ struct OptionSettingsView : View {
             HStack {
                 Image(systemName: option.imageName)
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 20, height: 20)
                     .clipped()
                     .aspectRatio(contentMode: .fit)
                 Text(option.title)
                     .foregroundColor(.blue)
-                    .font(.system(size: 18))
+                    .font(.system(size: 22))
             }
         }
     }

@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import PartialSheet
 
 struct Option {
     var id = UUID()
@@ -21,11 +20,12 @@ struct Option {
 extension Option {    
     static let options: [Option] = [
         .init(title: "About", isAddSection: false, imageName: "exclamationmark.bubble", view: AnyView(About())),
-        .init(title: "Keyboard Settings", isAddSection: false, imageName: "pencil.circle", view: AnyView(KeyboardSettings())),
+        .init(title: "Keyboard Settings", isAddSection: false, imageName: "keyboard.chevron.compact.down", view: AnyView(KeyboardSettings())),
         .init(title: "Send A Message", isAddSection: false, imageName: "bubble.left.and.bubble.right", view: AnyView(About())),
         .init(title: "Rate Us!", isAddSection: true, imageName: "textbox", view: AnyView(About())),
         .init(title: "Share App", isAddSection: false, imageName: "square.and.arrow.up.on.square", view: AnyView(ShareSheet(activityItems: ["Test"]))),
-        .init(title: "Terms and Privacy", isAddSection: false, imageName: "doc.circle", view: AnyView(About()))
+        .init(title: "Terms and Privacy", isAddSection: false, imageName: "doc.circle", view: AnyView(LicenseAgreement())),
+        .init(title: "Full Access Information", isAddSection: false, imageName: "eye", view: AnyView(About()))
     
     ]
 }
