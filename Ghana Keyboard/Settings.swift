@@ -11,9 +11,7 @@ import Combine
 
 class Settings: ObservableObject {
     var didChange = PassthroughSubject<Void, Never>()
-    
-    @Published var isBluetoothOn = false { didSet { update() } }
-    
+        
     @Published var types = ["Off","On"]
     @Published var type = 0 { didSet { update() } }
     
