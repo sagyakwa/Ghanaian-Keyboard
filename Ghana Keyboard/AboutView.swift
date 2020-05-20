@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct About: View {
+struct AboutView: View {
     let twitterUrl: NSURL = URL(string: "https://twitter.com/tetra_apps")! as NSURL
     
     var body: some View {
         VStack(spacing: 40){
             HStack(alignment: .center){
                 Text("About Ghana Keyboard")
-                .font(.custom("copperplate", size: 28))
+                    .font(.custom("copperplate", size: 28))
             }
             
             HStack(spacing: 15){
@@ -23,8 +23,7 @@ struct About: View {
                     .font(.headline)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.leading)
-            }
-            .padding()
+            }.padding()
             
             Spacer()
             
@@ -34,22 +33,18 @@ struct About: View {
                 HStack(alignment: .center){
                     // Twitter logo. Clickable and leads to company twitter
                  Image("twitter-logo")
-                     
-                 .resizable()
+                     .resizable()
                      .padding(.leading, -4)
                      .padding(.trailing, -1)
-                  .frame(width: 25, height: 25)
-                 .aspectRatio(contentMode: .fit)
+                     .frame(width: 25, height: 25)
+                     .aspectRatio(contentMode: .fit)
                     Button(action: {UIApplication.shared.open(self.twitterUrl as URL)}){
-                                                                     // Button Text
+                        // Button Text
                         Text("Follow us")
                          .font(.headline)
                          .fontWeight(.semibold)
                          .padding(.leading, -3)
-                        }
-                    
-                        .buttonStyle(PlainButtonStyle())
-
+                        }.buttonStyle(PlainButtonStyle())
                 }
             }
         }
@@ -58,6 +53,6 @@ struct About: View {
 
 struct About_Previews: PreviewProvider {
     static var previews: some View {
-        About()
+        AboutView()
     }
 }
