@@ -21,11 +21,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
+        let introductionView = IntroductionView()
+        let isFirstLaunch = UserDefaultsStorage.hasLaunchedBefore
       
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = OrientationLockedController(rootView: contentView)
+            
+            // Check here if it's the first launch of the app and provide intro view if true
+            if isFirstLaunch{
+                window.rootViewController = OrientationLockedController(rootView: introductionView)
+                UserDefaultsStorage.hasLaunchedBefore = true
+            }
+            else{
+                window.rootViewController = OrientationLockedController(rootView: contentView)
+            }
+            
             self.window = window
             window.makeKeyAndVisible()
         }
