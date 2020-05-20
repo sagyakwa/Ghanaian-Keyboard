@@ -73,6 +73,10 @@
 		7520B41D2473151F000980D3 /* KeyboardSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettings.swift; sourceTree = "<group>"; };
 		75316E53246F83FA0037D99E /* GifViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewer.swift; sourceTree = "<group>"; };
 		75316E55246F84DE0037D99E /* OrientationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSupport.swift; sourceTree = "<group>"; };
+		75ABEB902475A88000F0971D /* welcome_dark.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_dark.PNG; sourceTree = "<group>"; };
+		75ABEB912475A88000F0971D /* welcome_light.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_light.PNG; sourceTree = "<group>"; };
+		75ABEB922475A88100F0971D /* home_dark.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_dark.PNG; sourceTree = "<group>"; };
+		75ABEB932475A88100F0971D /* home_light.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_light.PNG; sourceTree = "<group>"; };
 		75AC5B642473D01600E0990E /* LicenseAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreement.swift; sourceTree = "<group>"; };
 		75C37D362472665900AA2AEB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		75C37D382472DB2900AA2AEB /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		750A3618246F39B700793B20 = {
 			isa = PBXGroup;
 			children = (
+				75ABEB8F2475A87800F0971D /* Screenshots */,
 				75EA65D724757D0F00574FDE /* Default-568h@2x.png */,
 				750A3623246F39B700793B20 /* Ghana Keyboard */,
 				750A3640246F39D400793B20 /* Custom */,
@@ -165,6 +170,17 @@
 				750A3643246F39D400793B20 /* Info.plist */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		75ABEB8F2475A87800F0971D /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				75ABEB902475A88000F0971D /* welcome_dark.PNG */,
+				75ABEB912475A88000F0971D /* welcome_light.PNG */,
+				75ABEB932475A88100F0971D /* home_light.PNG */,
+				75ABEB922475A88100F0971D /* home_dark.PNG */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
