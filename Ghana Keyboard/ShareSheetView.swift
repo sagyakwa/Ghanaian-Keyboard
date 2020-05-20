@@ -8,7 +8,7 @@
 //
 import SwiftUI
 
-struct ShareSheet: UIViewControllerRepresentable {
+struct ShareSheetView: UIViewControllerRepresentable {
     typealias Callback = (_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ error: Error?) -> Void
       
     let activityItems: [Any]
@@ -30,8 +30,10 @@ struct ShareSheet: UIViewControllerRepresentable {
     }
 }
 
+#if DEBUG
 struct ShareSheet_Previews: PreviewProvider {
     static var previews: some View {
-        ShareSheet(activityItems: ["Test"])
+        ShareSheetView(activityItems: ["Test"])
     }
 }
+#endif
