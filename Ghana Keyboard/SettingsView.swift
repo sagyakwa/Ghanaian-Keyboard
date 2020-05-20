@@ -19,55 +19,49 @@ struct SettingsView : View {
         VStack{
             NavigationView {
                 Form {
+                    ForEach(Option.options, id: \.id) { settingOption in OptionRow(option: settingOption)
+                    }
                     
-                    ForEach(Option.options, id: \.id) { settingOption in
-                            OptionRow(option: settingOption)
-                        }
                     Spacer()
-                    Section(footer:  // HStack for "follow me text" and twitter logo.
+                    
+                    // Footer "follow me text" and twitter logo.
+                    Section(footer:
                                HStack(alignment: .center){
                                    // Twitter logo. Clickable and leads to company twitter
                                 Image("twitter-logo")
-                                    
-                                .resizable()
+                                    .resizable()
                                     .padding(.leading, 12)
                                     .padding(.trailing, -17)
-                                 .frame(width: 25, height: 25)
-                                .aspectRatio(contentMode: .fit)
-                                   Button(action: {UIApplication.shared.open(self.twitterUrl as URL)}){
-                                                                                    // Button Text
+                                    .frame(width: 25, height: 25)
+                                    .aspectRatio(contentMode: .fit)
+                                
+                               Button(action: {UIApplication.shared.open(self.twitterUrl as URL)}){
                                        Text("Follow us")
-                                        .font(.headline)
-                                        .fontWeight(.semibold)
-                                        .padding(.leading, 19)
-                                       }
-                                   
-                                       .buttonStyle(PlainButtonStyle())
-
+                                            .font(.headline)
+                                            .fontWeight(.semibold)
+                                            .padding(.leading, 19)
+                                }.buttonStyle(PlainButtonStyle())
                                }){
-                        LogoView()
-                    }
-                    .padding()
-                    .padding(.leading, 85)
+                                LogoView()
+                                }
+                                .padding()
+                                .padding(.leading, 85)
                     
                 }
-                .animation(.easeIn(duration: 0.5))
+                .animation(.easeOut(duration: 0.5))
                 .padding()
                 .navigationBarTitle(Text("Settings")).font(.largeTitle)
-                .navigationBarItems(trailing:
-                    Button(action: {self.presentationMode.wrappedValue.dismiss()}){
+                .navigationBarItems(trailing: Button(action: {self.presentationMode.wrappedValue.dismiss()}){
                         Text("Done")
                             .font(.body)
                             .padding()
-                        
                 })
-                
-            } //end NavigaaionView
-            
-            
+            } //end NavigationView
         }
         // Only support portrait...no reason to rotate
         .supportedOrientations(.portrait)
+        
+        
     }
 }
 
@@ -78,8 +72,9 @@ struct OptionRow: View {
             if option.isAddSection {
                 Section {
                     OptionSettingsView(option: option)
-                }
-            } else {
+                }.cornerRadius(25)
+            }
+            else {
                 OptionSettingsView(option: option)
             }
         }
@@ -90,16 +85,17 @@ struct OptionSettingsView : View {
     let option: Option
     
     var body: some View {
-        return NavigationLink(destination: option.view) {
+        return NavigationLink(destination: self.option.view) {
             HStack {
-                Image(systemName: option.imageName)
+                Image(systemName: self.option.imageName)
                     .resizable()
-                    .frame(width: 20, height: 20)
-                    .clipped()
+                    .font(.body)
                     .aspectRatio(contentMode: .fit)
+                    .frame(width: 25, height: 25)
+                
                 Text(option.title)
-                    .foregroundColor(.blue)
                     .font(.system(size: 22))
+                    .padding(.horizontal)
             }
         }
     }
@@ -116,14 +112,13 @@ struct LogoView: View {
                 Image("rocket")
                     .resizable()
                     .frame(width: 87.0, height: 135)
-            }
-            .buttonStyle(PlainButtonStyle()) // button fills everything as blue without this. We just want our logo
+            }.buttonStyle(PlainButtonStyle()) // button fills everything as blue without this. We just want our logo
 
             // Text of company name
-            Text("TETRA APPS").multilineTextAlignment(.center)
-            .padding(.vertical, -40.0) .font(.custom("copperplate", size: 23))
-
-           
+            Text("TETRA APPS")
+                .multilineTextAlignment(.center)
+                .padding(.vertical, -40.0)
+                .font(.custom("copperplate", size: 23))
         }
     }
 }
@@ -132,8 +127,6 @@ struct LogoView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-//        SettingsView()
-//        ViewTest(viewName: "about")
     }
 }
 #endif
