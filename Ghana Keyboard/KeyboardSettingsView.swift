@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct KeyboardSettings: View {
+struct KeyboardSettingsView: View {
     
     @Environment(\.colorScheme) private var colorScheme
     @State var offset : CGFloat = UIScreen.main.bounds.height
@@ -120,6 +120,6 @@ struct KeyboardSettings: View {
 
 struct KeyboardSettings_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardSettings()
+        KeyboardSettingsView()
     }
 }
