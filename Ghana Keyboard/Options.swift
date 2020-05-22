@@ -22,7 +22,7 @@ extension Option {
     static let options: [Option] =
         [
         .init(title: "About", isAddSection: false, imageName: "bubble.left.and.bubble.right", view: AnyView(AboutView())),
-        .init(title: "Keyboard Settings", isAddSection: false, imageName: "keyboard", view: AnyView(KeyboardSettings())),
+        .init(title: "Keyboard Settings", isAddSection: false, imageName: "keyboard", view: AnyView(KeyboardSettingsView())),
         .init(title: "Send A Message", isAddSection: false, imageName: "bubble.left.and.bubble.right", view: AnyView(AboutView())),
         .init(title: "Rate Us!", isAddSection: false, imageName: "pencil.and.ellipsis.rectangle", view: AnyView(AboutView())),
         .init(title: "Share App", isAddSection: true, imageName: "square.and.arrow.up.on.square", view: AnyView(ShareSheetView(activityItems: ["Test"]))),
