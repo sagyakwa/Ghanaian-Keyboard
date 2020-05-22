@@ -116,6 +116,7 @@ struct LogoView: View {
 
             // Text of company name
             Text("TETRA APPS")
+                .foregroundColor(Color(UIColor.systemIndigo))
                 .multilineTextAlignment(.center)
                 .padding(.vertical, -40.0)
                 .font(.custom("copperplate", size: 23))
