@@ -17,7 +17,7 @@
 		750A3634246F39B800793B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A3632246F39B800793B20 /* LaunchScreen.storyboard */; };
 		750A3642246F39D400793B20 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A3641246F39D400793B20 /* KeyboardViewController.swift */; };
 		750A3646246F39D400793B20 /* Custom.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 750A363F246F39D400793B20 /* Custom.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520B41D2473151F000980D3 /* KeyboardSettings.swift */; };
+		750C5F8424786CA8002A10ED /* KeyboardSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C5F8324786CA8002A10ED /* KeyboardSettingsView.swift */; };
 		75316E54246F83FA0037D99E /* GifViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E53246F83FA0037D99E /* GifViewer.swift */; };
 		75316E56246F84DE0037D99E /* OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75316E55246F84DE0037D99E /* OrientationSupport.swift */; };
 		75AC5B652473D01600E0990E /* LicenseAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AC5B642473D01600E0990E /* LicenseAgreement.swift */; };
@@ -70,7 +70,7 @@
 		750A363F246F39D400793B20 /* Custom.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Custom.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		750A3641246F39D400793B20 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		750A3643246F39D400793B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7520B41D2473151F000980D3 /* KeyboardSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettings.swift; sourceTree = "<group>"; };
+		750C5F8324786CA8002A10ED /* KeyboardSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettingsView.swift; sourceTree = "<group>"; };
 		75316E53246F83FA0037D99E /* GifViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewer.swift; sourceTree = "<group>"; };
 		75316E55246F84DE0037D99E /* OrientationSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSupport.swift; sourceTree = "<group>"; };
 		75ABEB902475A88000F0971D /* welcome_dark.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_dark.PNG; sourceTree = "<group>"; };
@@ -130,6 +130,15 @@
 		750A3623246F39B700793B20 /* Ghana Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				75EA65D324749BF100574FDE /* UserDefaultsWrapper.swift */,
+				75C37D3E2472F0FC00AA2AEB /* ShareSheetView.swift */,
+				75316E55246F84DE0037D99E /* OrientationSupport.swift */,
+				75316E53246F83FA0037D99E /* GifViewer.swift */,
+				75C37D3A2472DDA500AA2AEB /* Settings.swift */,
+				75C37D382472DB2900AA2AEB /* Options.swift */,
+				75AC5B642473D01600E0990E /* LicenseAgreement.swift */,
+				75EA65DB247596C800574FDE /* RatingView.swift */,
+				75C37D3C2472DEE100AA2AEB /* SettingsView.swift */,
 				750A3624246F39B700793B20 /* AppDelegate.swift */,
 				750A3626246F39B700793B20 /* SceneDelegate.swift */,
 				750A362B246F39B800793B20 /* ContentView.swift */,
@@ -138,19 +147,10 @@
 				750A3635246F39B800793B20 /* Info.plist */,
 				750A3628246F39B800793B20 /* Ghana.xcdatamodeld */,
 				750A362F246F39B800793B20 /* Preview Content */,
-				75316E53246F83FA0037D99E /* GifViewer.swift */,
-				75316E55246F84DE0037D99E /* OrientationSupport.swift */,
 				75C37D362472665900AA2AEB /* AboutView.swift */,
-				75C37D382472DB2900AA2AEB /* Options.swift */,
-				75C37D3A2472DDA500AA2AEB /* Settings.swift */,
-				75C37D3C2472DEE100AA2AEB /* SettingsView.swift */,
-				75C37D3E2472F0FC00AA2AEB /* ShareSheetView.swift */,
-				7520B41D2473151F000980D3 /* KeyboardSettings.swift */,
-				75AC5B642473D01600E0990E /* LicenseAgreement.swift */,
 				7505616E247457EB0041B9AC /* InformationDetailView.swift */,
-				75EA65D324749BF100574FDE /* UserDefaultsWrapper.swift */,
 				75EA65D9247587E200574FDE /* ViewControllerHolder.swift */,
-				75EA65DB247596C800574FDE /* RatingView.swift */,
+				750C5F8324786CA8002A10ED /* KeyboardSettingsView.swift */,
 			);
 			path = "Ghana Keyboard";
 			sourceTree = "<group>";
@@ -302,8 +302,8 @@
 				75C37D3D2472DEE100AA2AEB /* SettingsView.swift in Sources */,
 				75EA65DC247596C800574FDE /* RatingView.swift in Sources */,
 				75AC5B652473D01600E0990E /* LicenseAgreement.swift in Sources */,
+				750C5F8424786CA8002A10ED /* KeyboardSettingsView.swift in Sources */,
 				75C37D3B2472DDA500AA2AEB /* Settings.swift in Sources */,
-				7520B41E2473151F000980D3 /* KeyboardSettings.swift in Sources */,
 				750A3627246F39B700793B20 /* SceneDelegate.swift in Sources */,
 				75C37D3F2472F0FC00AA2AEB /* ShareSheetView.swift in Sources */,
 			);

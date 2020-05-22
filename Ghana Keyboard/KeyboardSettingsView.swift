@@ -5,7 +5,6 @@
 //  Created by Samuel Agyakwa on 5/18/20.
 //  Copyright © 2020 Tetra Apps. All rights reserved.
 //
-
 import SwiftUI
 
 struct KeyboardSettingsView: View {
@@ -123,3 +122,4 @@ struct KeyboardSettings_Previews: PreviewProvider {
         KeyboardSettingsView()
     }
 }
+
